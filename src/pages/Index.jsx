@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./index.css";
+import "./Index.css";
 import logo from "../assets/icon-logo-dolbomzigi.svg";
 import addAccountIcon from "../assets/icon-add-account.svg";
 import heartIcon from "../assets/icon-heart.svg";
