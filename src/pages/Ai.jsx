@@ -32,7 +32,7 @@ const Ai = () => {
         </button>
 
         <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
-            user님의 오늘 건강 상태는 전반적으로 양호합니다.
+            박지형 님의 오늘 건강 상태는 전반적으로 양호합니다.
         </p>
       </div>
 

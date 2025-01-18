@@ -1,0 +1,101 @@
+.surveyIndex-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 상단부터 정렬 */
+    min-height: 100vh; /* 뷰포트 크기만큼 최소 높이 */
+    padding: 0 20px;
+    background-color: var(--gray-color-4);
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+}
+
+.surveyIndex-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 1.5em auto; /* 하단 여백 추가 */
+    text-align: left;
+    background-color: var(--gray-color-3);
+    border-radius: 12px;
+    padding: 1.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: auto; /* 높이를 고정하지 않음 */
+    overflow: visible; /* 잘리지 않도록 설정 */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em;
+    margin: 1em 0;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: 100%;
+    max-width: 300px;
+}
+
+.gradient-button {
+    background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
+}
+
+.sound-button {
+    background-color: var(--gray-color-3);
+    border: 1px solid var(--gray-color-2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em;
+    margin: 1.5em 0;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: 100%;
+    max-width: 300px;
+}
+.blue-button {
+    background-color: var(--face-color-1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: 100%;
+    max-width: 300px;
+}
+.yello-button {
+    background-color: var(--face-color-2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: 100%;
+    max-width: 300px;
+}
+.red-button {
+    background-color: var(--face-color-3);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: 100%;
+    max-width: 300px;
+}
+
+
