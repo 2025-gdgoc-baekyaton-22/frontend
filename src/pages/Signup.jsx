@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import "./Signup.css";
 import "./signup.css";
 import logo from "../assets/icon-logo-dolbomzigi.svg";
 
