@@ -34,7 +34,7 @@ const Login = () => {
             id="pw" 
             placeholder="비밀번호를 입력해주세요." 
             className="input-field" 
-            style={{ color: 'var(--gray-color-1)' }} // 텍스트 색상 설정
+            style={{ color: 'var(--gray-color-1)', marginBottom:0}} // 텍스트 색상 설정
           />
         </div>
       </div>
