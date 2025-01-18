@@ -7,7 +7,7 @@ import '../styles/colors.css';
 
 const Index = () => {
   return (
-    <div className="index-page" style={{ backgroundColor: 'var(--gray-color-4)' }}>
+    <div className="index-page">
       <img src={logo} alt="Logo" />
       <p className="body-text-4" style={{ color: 'var(--gray-color-1)' }}>
         가족의 건강을 함께 지키는 스마트 케어 서비스

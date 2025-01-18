@@ -6,9 +6,10 @@
     height: 100vh;
     text-align: center;
     padding: 0 20px; /* 페이지의 양옆 여백 추가 */
+    background-color: var(--gray-color-4);
   }
   
-  .button {
+  .index-page .button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,20 +25,20 @@
     gap: 10px; /* 아이콘과 텍스트 간격 */
   }
   
-  .gradient-button {
+  .index-page .gradient-button {
     background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
   }
   
-  .simple-button {
+  .index-page .simple-button {
     background: transparent;
     border: 2px solid var(--brand-color-2);
   }
   
-  .button img {
+  .index-page .button img {
     margin-bottom: 0; /* 아이콘 아래 여백 제거 */
   }
-
-  p {
+  
+  .index-page p {
     margin: 0; /* 기본 마진 제거 */
   }
   
