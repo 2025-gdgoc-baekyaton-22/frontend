@@ -10,6 +10,7 @@ const Login = () => {
         가족의 건강을 함께 지키는 스마트 케어 서비스
       </p>
       <br/>
+      <br/>
 
       <div className="login-container">
         <p className="header-text-4" style={{ color: 'var(--gray-color-1)', fontWeight: '700'}}>로그인하기</p>
@@ -37,6 +38,7 @@ const Login = () => {
           />
         </div>
       </div>
+      <br/>
       <Link to="/dashboard" className="button gradient-button">
         <p className="header-text-4" style={{ color: 'var(--gray-color-4)' }}>
           로그인하기
