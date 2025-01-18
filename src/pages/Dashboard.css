@@ -1,4 +1,4 @@
-.signup-page {
+.dashboard-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
-.signup-container {
+.dashboard-container {
     width: 100%;
     max-width: 300px;
     margin: 0 auto 1.5em auto; /* 하단 여백 추가 */
@@ -25,11 +25,11 @@
     overflow: visible; /* 잘리지 않도록 설정 */
 }
 
-.signup-form {
+.dashboard-form {
     margin-top: 1.5em;
 }
 
-.signup-form label {
+.dashboard-form label {
     display: block;
     margin-bottom: 0.5em;
     color: var(--gray-color-1);

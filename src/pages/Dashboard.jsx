@@ -1,10 +1,65 @@
+import { Link } from "react-router-dom";
+import "./Dashboard.css";
+import logo from "../assets/icon-logo-dolbomzigi.svg";
+
 const Dashboard = () => {
   return (
-    <div>
-      <h1>대시보드 페이지</h1>
-      {/* 대시보드 내용 추가 */}
+    <div className="signup-page">
+      <img src={logo} alt="Logo" />
+      <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
+        보호환자 실시간 건강 모니터링
+      </p>
+      <br />
+      <br />
+
+      <div className="signup-container">
+        <p className="header-text-4" style={{ color: "var(--gray-color-1)", fontWeight: "700" }}>
+          보호환자 기본 정보 입력
+        </p>
+        <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
+          건강데이터 관리가 필요한 보호 환자분의 정보를 작성해주세요.
+        </p>
+
+        <div className="signup-form">
+          <label className="body-text-4" htmlFor="caree-name">이름</label>
+          <input type="text" id="caree-name" placeholder="보호 환자분의 이름을 입력해주세요." className="input-field" style={{ color: "var(--gray-color-1)" }} />
+
+
+          <label className="body-text-4" htmlFor="caree-birthdate">생년월일</label>
+          <input type="date" id="caree-birthdate" className="input-field" style={{ color: "var(--gray-color-1)" }} // 텍스트 색상 설정
+          />
+
+          <label className="body-text-4" htmlFor="caree-phone">연락처</label>
+          <input type="text" id="caree-phone" placeholder="보호 환자분의 연락처를 입력해주세요." className="input-field" style={{ color: "var(--gray-color-1)" }}/>
+
+          <label className="body-text-4" htmlFor="caree-address">주소</label>
+          <input type="text" id="caree-address" placeholder="보호 환자분의 주소를 입력해주세요." className="input-field" style={{ color: "var(--gray-color-1)" , marginBottom:0}}/>
+        </div>
+      </div>
+      <br />
+
+      <div className="signup-container">
+        <p className="header-text-4" style={{ color: "var(--gray-color-1)", fontWeight: "700" }}>
+            비밀번호
+        </p>
+        <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
+            보호자 분들이 로그인할 때 사용될 네자리 비밀번호를 설정해주세요.
+        </p>
+
+        <div className="signup-form">
+          <label className="body-text-4" htmlFor="pw"></label>
+          <input type="password" id="pw" placeholder="4개 자리의 숫자를 입력해주세요." className="input-field" style={{ color: "var(--gray-color-1)" }} />
+        </div>
+      </div>
+      <br />
+
+      <Link to="/index" className="button gradient-button">
+        <p className="header-text-4" style={{ color: "var(--gray-color-4)" }}>
+          등록하기
+        </p>
+      </Link>
     </div>
   );
 };
 
-export default Dashboard; 
+export default Dashboard;
