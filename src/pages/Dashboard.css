@@ -25,27 +25,6 @@
   overflow: visible; /* 잘리지 않도록 설정 */
 }
 
-.dashboard-form {
-  margin-top: 1.5em;
-}
-
-.dashboard-form label {
-  display: block;
-  margin-bottom: 0.5em;
-  color: var(--gray-color-1);
-}
-
-.input-field {
-  width: 100%; /* 전체 너비 활용 */
-  padding: 0.8em;
-  margin-bottom: 1em;
-  background-color: var(--gray-color-4);
-  border: 1px solid var(--gray-color-2);
-  border-radius: 8px;
-  font-size: 16px;
-  box-sizing: border-box; /* 패딩 포함 크기 계산 */
-}
-
 .button {
   display: flex;
   align-items: center;
@@ -68,14 +47,6 @@
     background: transparent;
     border: 2px solid var(--brand-color-2);
   }
-
-.report-container {
-  background-color: var(--state-color-2); /* 배경색 설정 */
-  border-radius: 8px; /* 모서리 둥글게 */
-  padding: 1em; /* 내부 여백 */
-  margin-top: 1em; /* 상단 여백 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-}
 
 .inner-button {
     display: flex;
