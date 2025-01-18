@@ -1,65 +1,93 @@
 .dashboard-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start; /* 상단부터 정렬 */
-    min-height: 100vh; /* 뷰포트 크기만큼 최소 높이 */
-    padding: 0 20px;
-    background-color: var(--gray-color-4);
-    overflow-y: auto; /* 스크롤 가능하도록 설정 */
-    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 상단부터 정렬 */
+  min-height: 100vh; /* 뷰포트 크기만큼 최소 높이 */
+  padding: 0 20px;
+  background-color: var(--gray-color-4);
+  overflow-y: auto; /* 스크롤 가능하도록 설정 */
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
 .dashboard-container {
-    width: 100%;
-    max-width: 300px;
-    margin: 0 auto 1.5em auto; /* 하단 여백 추가 */
-    text-align: left;
-    background-color: var(--gray-color-3);
-    border-radius: 12px;
-    padding: 1.5em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    height: auto; /* 높이를 고정하지 않음 */
-    overflow: visible; /* 잘리지 않도록 설정 */
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1.5em auto; /* 하단 여백 추가 */
+  text-align: left;
+  background-color: var(--gray-color-3);
+  border-radius: 12px;
+  padding: 1.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  height: auto; /* 높이를 고정하지 않음 */
+  overflow: visible; /* 잘리지 않도록 설정 */
 }
 
 .dashboard-form {
-    margin-top: 1.5em;
+  margin-top: 1.5em;
 }
 
 .dashboard-form label {
-    display: block;
-    margin-bottom: 0.5em;
-    color: var(--gray-color-1);
+  display: block;
+  margin-bottom: 0.5em;
+  color: var(--gray-color-1);
 }
 
 .input-field {
-    width: 100%; /* 전체 너비 활용 */
-    padding: 0.8em;
-    margin-bottom: 1.0em;
-    background-color: var(--gray-color-4);
-    border: 1px solid var(--gray-color-2);
-    border-radius: 8px;
-    font-size: 16px;
-    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  width: 100%; /* 전체 너비 활용 */
+  padding: 0.8em;
+  margin-bottom: 1em;
+  background-color: var(--gray-color-4);
+  border: 1px solid var(--gray-color-2);
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
 .button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.6em 1em;
+  margin: 1em 0; /* 상하 여백 추가 */
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--gray-color-4);
+  width: 100%; /* 버튼 너비를 100%로 설정 */
+  max-width: 300px; /* 최대 너비 설정 */
+}
+
+.gradient-button {
+  background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
+}
+
+.simple-button {
+    background: transparent;
+    border: 2px solid var(--brand-color-2);
+  }
+
+.report-container {
+  background-color: var(--state-color-2); /* 배경색 설정 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  padding: 1em; /* 내부 여백 */
+  margin-top: 1em; /* 상단 여백 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+}
+
+.inner-button {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0.6em 1em;
-    margin: 1.5em 0;
+    margin: 1em 0; /* 상하 여백 추가 */
     border-radius: 8px;
     text-decoration: none;
     font-size: 1.2em;
     color: var(--gray-color-4);
-    width: 100%;
-    max-width: 300px;
-}
-
-.gradient-button {
-    background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
-}
+    width: 100%; /* 버튼 너비를 100%로 설정 */
+    max-width: 300px; /* 최대 너비 설정 */
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
+  }
