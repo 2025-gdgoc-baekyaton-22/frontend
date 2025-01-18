@@ -1,21 +1,19 @@
-.login-page {
+.setting-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: flex-start; /* 상단부터 정렬 */
+    min-height: 100vh; /* 뷰포트 크기만큼 최소 높이 */
     padding: 0 20px;
     background-color: var(--gray-color-4);
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
-.login-page .logo {
-    margin-bottom: 1.5em;
-}
-
-.login-container {
+.setting-container {
     width: 100%;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 1.5em auto; /* 하단 여백 추가 */
     text-align: left;
     background-color: var(--gray-color-3);
     border-radius: 12px;
@@ -23,25 +21,24 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: auto;
-    overflow: hidden;
+    height: auto; /* 높이를 고정하지 않음 */
+    overflow: visible; /* 잘리지 않도록 설정 */
 }
 
-.login-form {
+.setting-form {
     margin-top: 1.5em;
 }
 
-.login-form label {
+.setting-form label {
     display: block;
     margin-bottom: 0.5em;
     color: var(--gray-color-1);
 }
 
 .input-field {
-    width: 90%;
+    width: 100%; /* 전체 너비 활용 */
     padding: 0.8em;
-    margin-bottom: 1.5em;
+    margin-bottom: 1.0em;
     background-color: var(--gray-color-4);
     border: 1px solid var(--gray-color-2);
     border-radius: 8px;
@@ -65,8 +62,4 @@
 
 .gradient-button {
     background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
-}
-
-p {
-    margin: 0;
 }
