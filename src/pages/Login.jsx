@@ -11,7 +11,7 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://dollbomzigi.store/users/signin", {
+      const response = await fetch("http://dollbomzigi.store/api/users/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
