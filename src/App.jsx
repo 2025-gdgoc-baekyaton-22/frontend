@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react'
+// import { useState } from 'react'
 import './App.css'
 
 // 각 페이지 컴포넌트 임포트
@@ -11,7 +11,7 @@ import SurveyIndex from './pages/SurveyIndex';
 import Ai from './pages/Ai';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   return (
     <Router>

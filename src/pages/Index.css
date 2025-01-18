@@ -1,0 +1,43 @@
+.index-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px; /* 페이지의 양옆 여백 추가 */
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6em 1em; /* 내부 패딩 조정 */
+    margin: 1.5em 10px; /* 버튼 간 간격 및 양옆 마진 추가 */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: var(--gray-color-4);
+    width: calc(100% - 40px); /* 버튼이 양옆 마진에 따라 화면 크기에 맞게 줄어들도록 설정 */
+    max-width: 300px; /* 버튼 최대 크기 제한 */
+    flex-direction: row; /* 가로 정렬 유지 */
+    gap: 10px; /* 아이콘과 텍스트 간격 */
+  }
+  
+  .gradient-button {
+    background: linear-gradient(90deg, var(--brand-color-1), var(--brand-color-2));
+  }
+  
+  .simple-button {
+    background: transparent;
+    border: 2px solid var(--brand-color-2);
+  }
+  
+  .button img {
+    margin-bottom: 0; /* 아이콘 아래 여백 제거 */
+  }
+
+  p {
+    margin: 0; /* 기본 마진 제거 */
+  }
+  
