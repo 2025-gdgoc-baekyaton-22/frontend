@@ -1,9 +1,46 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Dashboard.css";
 import logo from "../assets/icon-logo-dolbomzigi.svg";
 import bellIcon from "../assets/icon-bell.svg";
 
 const Dashboard = () => {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://dollbomzigi.store/api/users/info");
+
+        if (!response.ok) {
+          throw new Error("데이터 불러오기 실패");
+        }
+
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("오류 발생:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <p style={{ color: "var(--gray-color-1)" }}>로딩 중...</p>;
+  }
+
+  if (!data) {
+    return (
+      <p style={{ color: "var(--gray-color-1)" }}>
+        데이터를 불러올 수 없습니다.
+      </p>
+    );
+  }
+
   return (
     <div className="dashboard-page">
       <img src={logo} alt="Logo" />
@@ -21,7 +58,7 @@ const Dashboard = () => {
           fontWeight: "700",
         }}
       >
-        user 보호환자 대시보드
+        {data.careTakerName} 보호환자 대시보드
       </p>
       <br />
 
@@ -37,7 +74,7 @@ const Dashboard = () => {
           환자 기본 정보
         </p>
 
-        <button to="/signup" className="button gradient-button">
+        <button className="button gradient-button">
           <img src={bellIcon} alt="Add Account Icon" />
           <p className="header-text-4" style={{ color: "var(--gray-color-4)" }}>
             긴급 119 연락
@@ -54,7 +91,7 @@ const Dashboard = () => {
           보호자 : 신현우
         </p>
         <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
-          최근 설문 응답시간: 2025년 01월 20일 14:30
+          최근 설문 응답시간: {data.latestUpdate}
         </p>
       </div>
 
@@ -80,6 +117,7 @@ const Dashboard = () => {
         <br/>인지: BAD  |  병원 방문: YES
         <br/><br/>관찰 사항: 
         <br/>환자는 인지적 어려움을 겪고 있습니다. 환자는 식사를 제대로 하지 않습니다. 환자는 수면에 어려움을 겪습니다.보호자를 위한 조언: 환자의 인지적 능력을 정기적으로 평가하고 필요한 경우 지원을 제공하세요. 환자가 규칙적이고 영양가 있는 식사를 하도록 도와주세요. 환자가 충분한 수면을 취할 수 있도록 지원하세요. 환자가 약물을 제대로 복용하고 있는지 확인하세요. 환자에게 감정적 지원을 제공하고, 필요에 따라 전문적인 도움을 받도록 권유하세요. 환자의 건강 상태에 대해 우려 사항이 있는 경우 의료 전문가와 상담하세요.
+
         </p>
       </div>
 

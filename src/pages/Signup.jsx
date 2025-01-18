@@ -43,7 +43,7 @@ const Signup = () => {
       careTakerPhone: careTaker.phone,
       careTakerAddress: careTaker.address,
       passWord: careTaker.password,
-      ThreeOrTwo: careTaker.alertFrequency === "true",
+      ThreeOrTwo: true, //careTaker.alertFrequency === "true",
       careGiver: careGiver.map((giver) => ({
         careGiverName: giver.name,
         careGiverPhone: giver.phone,
