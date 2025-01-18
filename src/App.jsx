@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import SurveyIndex from './pages/SurveyIndex';
 import Ai from './pages/Ai';
+import Setting from './pages/Setting';
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -23,6 +24,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/survey-index" element={<SurveyIndex />} />
           <Route path="/ai" element={<Ai />} />
+          <Route path="/setting" element={<Setting />} />
         </Routes>
       </div>
     </Router>
