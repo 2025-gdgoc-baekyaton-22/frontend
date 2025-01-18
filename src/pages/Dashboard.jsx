@@ -70,7 +70,7 @@ const Dashboard = () => {
           일일 건강 리포트
         </p>
         <p className="body-text-4" style={{ color: "var(--gray-color-1)" }}>
-        <br/> 전반적인 신체 상태: MID
+        <br/>전반적인 신체 상태: MID
         <br/>배변/배뇨: 알 수 없음
         <br/>기분: MID
         <br/>사회적 활동: EXCELLENT
