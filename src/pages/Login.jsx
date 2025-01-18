@@ -6,31 +6,35 @@ import logo from "../assets/icon-logo-dolbomzigi.svg";
 const Login = () => {
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
-  const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async () => {
     try {
-      const response = await fetch("http://dollbomzigi.store/users/signin", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          careTakerPhone: phone,
-          passWord: password,
-        }),
-      });
+      const response = await fetch(
+        "http://dollbomzigi.store/api/users/signin",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            careTakerPhone: phone,
+            passWord: password,
+          }),
+        }
+      );
 
       const data = await response.json();
+      console.log(data);
+      console.log(response);
 
-      if (response.ok && data.success) {
+      if (response.ok && data.isSuccess) {
         navigate("/dashboard");
       } else {
-        setShowModal(true);
+        alert("로그인에 ㅅ패했습니다. 다시 시도해주세요.");
       }
     } catch (err) {
-      setShowModal(true);
+      alert(err.message);
     }
   };
 
@@ -87,23 +91,6 @@ const Login = () => {
           로그인하기
         </p>
       </button>
-
-      {/* 로그인 실패 */}
-      {showModal && (
-        <div className="modal-overlay">
-          <div className="modal">
-            <p className="modal-message">
-              아이디 또는 비밀번호가 올바르지 않습니다.
-            </p>
-            <button
-              className="modal-button"
-              onClick={() => setShowModal(false)}
-            >
-              확인
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 };
