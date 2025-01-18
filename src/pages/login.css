@@ -46,6 +46,7 @@
     border: 1px solid var(--gray-color-2);
     border-radius: 8px;
     font-size: 16px;
+    box-sizing: border-box; /* 패딩 포함 크기 계산 */
 }
 
 .button {
