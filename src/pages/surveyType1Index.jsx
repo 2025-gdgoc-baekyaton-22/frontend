@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./SurveyIndex.css";
+import "./surveyType1Index.css";
 import logo from "../assets/icon-logo-dolbomzigi.svg";
 import soundIcon from "../assets/icon-sound.svg";
 
